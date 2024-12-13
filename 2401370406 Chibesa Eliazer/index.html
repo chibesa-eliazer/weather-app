@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Luapula Province</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Weather App</h1>
+    </header>
+    
+  
+    <div class="tabs">
+      <button class="tab-btn active" onclick="openTab(event, 'currentWeather')">Current Weather</button>
+      <button class="tab-btn" onclick="openTab(event, 'forecast')">5-Day Forecast</button>
+    </div>
+
+    <div id="currentWeather" class="tab-content active">
+      <div class="search-bar skeuomorphic">
+        <input type="text" id="cityInput" placeholder="Enter city name..." class="input-skeuomorphic">
+        <button onclick="searchWeather()" class="btn-skeuomorphic">Search</button>
+      </div>
+      
+      <div class="weather-info skeuomorphic">
+        <h2 id="cityName"></h2>
+        <div id="localTime"></div>
+        <img id="weatherIcon" src="" alt="Weather Icon" class="icon-skeuomorphic">
+        <p id="temperature" class="temp-skeuomorphic"></p>
+        <p id="weatherCondition"></p>
+        <p id="humidity"></p>
+        <p id="windSpeed"></p>
+      </div>
+    </div>
+
+    <div id="forecast" class="tab-content">
+      <div id="forecastInfo" class="forecast skeuomorphic">
+        <h3>5-Day Forecast</h3>
+        <div id="forecastDetails"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="copyright"> Designed and Maintained By MS Chibesa Eliazer, SIN:2401370406 </span>
+    <ul>
+      <li><a href="https://zrdc.org/">ZRDC</a></li>
+      <li><a href="https://www.icuzambia.net/">ICU Zambia</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
